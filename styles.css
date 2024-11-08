@@ -1,109 +1,90 @@
-/* Reset and basic styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-
-nav {
-    background-color: #0044cc;
-    padding: 1rem;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    transition: background 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #0033aa;
-    border-radius: 5px;
-}
-
-section {
-    padding: 4rem 2rem;
-    text-align: center;
-    min-height: 50vh;
-}
-
-#home {
-    background-color: #e3f2fd;
-}
-
-#about {
-    background-color: #e8eaf6;
-}
-
-#services {
-    background-color: #fce4ec;
-}
-
-#contact {
-    background-color: #f3e5f5;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #d7b8d4;
+    color: #000;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    margin: 0;
 }
 
-.container {
-    background-color: white;
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #d7b8d4;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.email {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav button {
+    background-color: #f5f0f5;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav button:hover {
+    background-color: #ddd;
+}
+
+main {
+    max-width: 800px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
     text-align: center;
 }
 
-h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
+.welcome h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-form {
+.welcome p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.deals-in {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-label, input, select, button {
-    margin-bottom: 15px;
-}
-
-button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
+.deal-item {
+    background-color: #f5f0f5;
+    color: #000;
+    border: 1px solid #000;
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
-#result {
-    margin-top: 20px;
-    font-size: 18px;
+.deal-item:hover {
+    background-color: #ddd;
 }
