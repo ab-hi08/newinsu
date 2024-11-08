@@ -1,36 +1,28 @@
-document.getElementById('insurance-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    var age = document.getElementById('age').value;
-    var bmi = document.getElementById('bmi').value;
-    var smoker = document.getElementById('smoker').value;
-
-    var forecastPrice = calculateForecastPrice(age, bmi, smoker);
-
-    document.getElementById('result').textContent = 'Forecasted Insurance Price: $' + forecastPrice;
-});
-
-function calculateForecastPrice(age, bmi, smoker) {
-    var basePrice = 100; // Base price in dollars
-
-    // Adjust base price based on age
-    basePrice += (age - 18) * 2;
-
-    // Adjust base price based on BMI
-    if (bmi > 25) {
-        basePrice += (bmi - 25) * 5;
+function navigate(section) {
+    switch (section) {
+        case 'home':
+            alert("Navigating to Home Page!");
+            break;
+        case 'about':
+            alert("Navigating to About Us Page!");
+            break;
+        case 'services':
+            alert("Navigating to Services Page!");
+            break;
+        case 'contact':
+            alert("Navigating to Contact Page!");
+            break;
+        case 'health':
+            alert("Navigating to Health Insurance!");
+            break;
+        case 'car':
+            alert("Navigating to Car Insurance!");
+            break;
+        case 'house':
+            alert("Navigating to House Insurance!");
+            break;
+        default:
+            alert("Unknown section");
+            break;
     }
-
-    // Adjust base price based on smoking status
-    if (smoker === 'yes') {
-        basePrice += 200;
-    }
-
-    return basePrice.toFixed(2);
-}
-// Smooth scrolling function
-function smoothScroll(target) {
-    document.querySelector(target).scrollIntoView({
-        behavior: 'smooth'
-    });
 }
